@@ -75,15 +75,15 @@ const tradingParametersSchema = new mongoose.Schema(
         max: 100,
       },
     },
-    isActive: {
-      type: Boolean,
-      default: true,
-    },
-    updatedBy: {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "User",
-      required: true,
-    },
+    // isActive: {
+    //   type: Boolean,
+    //   default: true,
+    // },
+    // updatedBy: {
+    //   type: mongoose.Schema.Types.ObjectId,
+    //   ref: "User",
+    //   required: true,
+    // },
   },
   { timestamps: true }
 );
@@ -185,10 +185,6 @@ const userSchema = new mongoose.Schema(
       type: String,
       enum: ["ADMIN"],
       default: "ADMIN",
-    },
-    isActive: {
-      type: Boolean,
-      default: true,
     },
     lastLogin: Date,
   },

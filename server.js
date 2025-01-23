@@ -5,7 +5,10 @@ const responseFormatter = require("./middleware/responseFormatter");
 const errorHandler = require("./middleware/errorHandler");
 const logger = require("./middleware/logger");
 
-const loginRouter = require("./routes/user");
+const tradingParametersRouter = require('./routes/tradingParameters');
+const userRouter = require('./routes/user')
+const walletRouter = require('./routes/wallet');
+const transactionRouter = require('./routes/transaction');
 
 const app = express();
 

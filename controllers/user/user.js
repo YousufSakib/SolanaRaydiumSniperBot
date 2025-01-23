@@ -33,12 +33,12 @@ class UserController {
       }
 
       // Check if user is active
-      if (!user.isActive) {
-        return res.status(401).json({
-          status: "error",
-          message: "Account is disabled",
-        });
-      }
+      // if (!user.isActive) {
+      //   return res.status(401).json({
+      //     status: "error",
+      //     message: "Account is disabled",
+      //   });
+      // }
 
       // Generate JWT token
       const EXPRIES_IN = process.env.JWT_EXPIRATION || "72h";

@@ -1,9 +1,9 @@
 const express = require("express");
 const { authMiddleware } = require("../middleware/auth");
 
-const {
-  tradingParametersController,
-} = require("../controllers/tradingParameters/tradingParameters");
+const 
+  tradingParametersController
+ = require("../controllers/tradingParameters/tradingParameters");
 
 const tradingRouter = express.Router();
 

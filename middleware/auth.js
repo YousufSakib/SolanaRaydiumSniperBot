@@ -41,12 +41,12 @@ const authMiddleware = async (req, res, next) => {
       });
     }
 
-    // Find user and check if still active
+    // Find user 
     const user = await User.findById(decoded.userId);
-    if (!user || !user.isActive) {
+    if (!user) {
       return res.status(401).json({
         status: "error",
-        message: "User not found or inactive",
+        message: "User not found",
       });
     }
 
